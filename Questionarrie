@@ -1,0 +1,50 @@
+Docker installation and Deployment, Container Structure
+
+Code of iterating array
+
+ class A{
+
+        A(){
+         System.out.println("Inside A..");
+        }
+  }
+ class B extends A {
+
+        B(){
+            System.out.println("Inside B..");
+        }
+
+        public static void main() {
+
+        A o = new B();
+
+        }
+}
+
+
+The provided code consists of two classes, A and B, where B extends A. The main method creates an object of class B using the reference of class A. Let's analyze the code and determine the output.
+
+Class A has a default constructor that prints "Inside A.." when an object of A is created.
+
+Class B extends A and has its own constructor that prints "Inside B.." when an object of B is created.
+
+In the main method, an object 'o' of type A is created, but it actually refers to an instance of class B.
+When an object is created using the statement A o = new B();, the constructor of class B is invoked because the object being created is of type B. However, the reference variable 'o' has a type of A, so only members of class A can be accessed through that reference.
+
+Now, let's see the output:
+
+CSS
+Copy code
+Inside A..
+Inside B..
+The output is a result of both constructors being called. The constructor of class A is called because it's the constructor of the superclass, and then the constructor of class B is called because the object being created is of type B.
+
+
+JAVA8 (Converts the HashMap into the ArrayList)
+
+map.put returns the previous value of the map
+
+
+
+
+
